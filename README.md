@@ -22,3 +22,32 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| name               | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+
+### Association
+- has_many :recipes
+
+## recipeテーブル
+
+| Column     | Type      | Options                        |
+| ---------- | --------- | ------------------------------ |
+| image      | string    | null: false                    |
+| dish       | string    | null: false                    |
+| persons    | string    | null: false                    |
+| material   | string    | null: false                    |
+| amount     | string    | null: false                    |
+| make_one   | text      | null: false                     |
+| make_two   | text      | null: false                     |
+| make_three | text      |                                |
+| make_four  | text      |                                |
+| make_five  | text      |                                |
+| user       | references| null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
