@@ -37,7 +37,7 @@ Things you may want to cover:
 
 | Column     | Type      | Options                        |
 | ---------- | --------- | ------------------------------ |
-| image      | string    | null: false                    |写真
+| image      | text      | null: false                    |写真
 | dish       | string    | null: false                    |料理名
 | persons    | string    | null: false                    |人数
 | material   | string    | null: false                    |材料
