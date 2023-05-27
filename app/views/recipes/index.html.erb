@@ -1,4 +1,42 @@
-<div class="wrapper">
-  <%= render "shared/footer" %>
-  <%= render "shared/header" %>
+<%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
+
+<div class="main" >
+  <!-- 文章 -->
+  <div class="sentense">
+    5の工程内で料理ができる!!<br>
+    らくちんレシピをシェアしよう！！
+  </div>
+
+  <!-- レシピ投稿ページ遷移ボタン -->
+  
+  <!-- レシピ一覧 -->
+  <div class="recipe-contents">
+    <div class="subtitle">
+      みんなのレシピ
+    </div>
+
+    <ul class='recipe-lists'>
+    <% @recipes.each do |recipe|%>
+      <li class='list'>
+
+        <%= link_to recipe_path(recipe) do %>
+          <!-- レシピ画像-->
+          <div class='recipe-img-content'>
+            <%= image_tag recipe.image, class: "recipe-img" if recipe.image.attached?%>
+          </div>
+
+          <div class='recipe-info'>
+            <!-- レシピタイトル-->
+            <h3 class='recipe-name'>
+              <%= recipe.dish%>
+            </h3>
+          </div>
+        <% end %>
+
+      </li>
+    <% end%>
+  </div>
 </div>
+
+<%= render partial: "devise/shared/footer"%>
+
