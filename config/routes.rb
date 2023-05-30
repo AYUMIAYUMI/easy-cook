@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :recipes, only: :index
+  resources :recipes, only: [:index, :new]
   get 'recipes/index'
   root to: "recipes#index"
 end

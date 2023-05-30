@@ -1,0 +1,80 @@
+<!--レシピ投稿ページ-->
+
+
+
+  <div class="new-main">
+    <h1>あなたのレシピを投稿しよう！</h1>
+
+    <!--投稿フォーム-->
+    <%= form_with url: "/posts", method: :post, local: true do |form| %>
+      <!--画像フォーム-->
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          レシピ画像
+        </div>
+        <%= form.label :image, '画像' %>
+        <%= form.file_field :image %> 
+      </div>
+      <!--画像フォーム-->
+
+
+      <div class="new-recipetexts">
+
+        <div class="weight-bold-text">
+          料理名
+        </div>
+        <%= form.text_area :dish, class:"recipe-text",  id:"recipe-name" %><!--idが曖昧なので仮-->
+
+        <div class="weight-bold-text">
+          人数
+        </div>
+        <%= form.text_area :persons, class:"recipe-text", id:"recipe-persons" %>
+
+        <div class="weight-bold-text">
+          材料
+        </div>
+        <%= form.text_area :material, class:"recipe-text", id:"recipe-material" %>
+
+        <div class="weight-bold-text">
+          分量
+        </div>
+        <%= form.text_area :amount, class:"recipe-text", id:"recipe-amount" %>
+
+        <div class="tukurikata">
+          作り方（1.と2.は必須項目です）
+        </div>
+
+        <div class="weight-bold-text">
+          1.
+        </div>
+        <%= form.text_area :make_one, class:"recipe-text", id:"recipe-one" %>
+
+        <div class="weight-bold-text">
+          2.
+        </div>
+        <%= form.text_area :make_two, class:"recipe-text", id:"recipe-two" %>
+
+        <div class="weight-bold-text">
+          3.
+        </div>
+        <%= form.text_area :make_three, class:"recipe-text", id:"recipe-three" %>
+
+        <div class="weight-bold-text">
+          4.
+        </div>
+        <%= form.text_area :make_four, class:"recipe-text", id:"recipe-four" %>
+
+        <div class="weight-bold-text">
+          5.
+        </div>
+        <%= form.text_area :make_five, class:"recipe-text", id:"recipe-five" %>
+
+        <div class="rp-btn-contents">
+          <%= form.submit "このレシピで投稿する！" ,class:"rp-btn" %>
+          <%=link_to 'もどる', root_path, class:"back-btn" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
