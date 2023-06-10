@@ -24,6 +24,10 @@ class RecipesController < ApplicationController
     recipe.destroy
   end
 
+  def update
+    recipe = Recipe.find(params[:id])
+    recipe.update(recipe_params)
+  end
 
   private
   
