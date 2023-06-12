@@ -46,6 +46,14 @@
     <div class="r-make5">
       <%= @recipe.make_five%>
     </div>
+
+    <div class="recipe-contributor">
+      レシピ作成者
+    </div>
+    <div class="recipe-user">
+      <%= @recipe.user.nick_name%>
+    </div>
+
   </div>
 
   <% if current_user.id == @recipe.user_id %>
@@ -53,6 +61,8 @@
     <%= link_to "レシピを削除する", recipe_path(@recipe.id),method: :delete, class:"recipe-destroy" %>
 
   <% end %>
+
+
 
 
 </div>
