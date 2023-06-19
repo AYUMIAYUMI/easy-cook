@@ -1,0 +1,68 @@
+<div class="recipe-show">
+  <!--画像-->
+  <div class="recipe-img-content">
+    <%= image_tag @recipe.image, class:"recipe-box-img" %>
+  </div>
+
+  <!--料理名-->
+  <h2 class="d-name">
+    <%= @recipe.dish%>
+  </h2>
+
+  <!--人数-->
+  <div class="r-persons">
+    <%= @recipe.persons%>
+  </div>
+
+  <!--材料-->
+  <div class="r-material">
+    <%= @recipe.material%>
+  </div>
+
+  <!--分量-->
+  <div class="r-amount">
+    <%= @recipe.amount%>
+  </div>
+
+  <!--作り方-->
+  <div class="r-make-box">
+
+    <div class="r-make1">
+      <%= @recipe.make_one%>
+    </div>
+
+    <div class="r-make2">
+      <%= @recipe.make_two%>
+    </div>
+
+    <div class="r-make3">
+      <%= @recipe.make_three%>
+    </div>
+
+    <div class="r-make4">
+      <%= @recipe.make_four%>
+    </div>
+
+    <div class="r-make5">
+      <%= @recipe.make_five%>
+    </div>
+
+    <div class="recipe-contributor">
+      レシピ作成者
+    </div>
+    <div class="recipe-user">
+      <%= @recipe.user.nick_name%>
+    </div>
+
+  </div>
+
+  <% if current_user.id == @recipe.user_id %>
+    <%= link_to "レシピを編集する", edit_recipe_path(@recipe.id), method: :get, class: "recipe-red-btn"%>
+    <%= link_to "レシピを削除する", recipe_path(@recipe.id),method: :delete, class:"recipe-destroy" %>
+
+  <% end %>
+
+
+
+
+</div>

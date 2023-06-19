@@ -1,0 +1,23 @@
+<header class='top-page-header'>
+  <!--ヘッダータイトル-->
+  <div class="big-title">
+    <%=link_to 'easy-cook!', '/' %>
+  </div>
+
+  <!--ヘッダー右側-->
+  <div class='right-text'>
+    <ul class='lists-right'>
+ 
+      <% if user_signed_in? %>
+         <li><%= link_to current_user.nick_name, "current_user", class: "user-nickname" %></li>
+         <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', "/users/sign_in", method: :POST, class: "login" %></li>
+        <li><%= link_to '新規登録', "/users/sign_up",  method: :GET, class: "sign-up" %></li>
+      <% end %>
+
+    </ul>
+  </div>
+  <!--ヘッダー右側-->
+
+</header>

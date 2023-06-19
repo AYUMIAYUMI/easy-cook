@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  resources :recipes, only: [:index, :new, :show, :create, :show, :edit, :destroy, :update]
+  get 'recipes/index'
+  root to: "recipes#index"
 end
