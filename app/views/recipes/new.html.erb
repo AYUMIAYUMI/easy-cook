@@ -9,6 +9,7 @@
 
 
     <%= form_with(model: @recipe, local: true) do |form| %>
+    <%= render 'layouts/error_messages', model: form.object %>
 
       <!--画像フォーム-->
       <div class="img-upload">

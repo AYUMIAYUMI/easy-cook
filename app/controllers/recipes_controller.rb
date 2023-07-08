@@ -10,6 +10,10 @@ class RecipesController < ApplicationController
   
   def create
     @recipe = Recipe.create(recipe_params)
+    if @recipe.save
+    else
+      render :new
+    end
   end
 
   def show
@@ -36,7 +40,7 @@ class RecipesController < ApplicationController
       redirect_to  '/users/sign_in'
     end
   end
-  
+
   def recipe_params
     params.require(:recipe).permit(:image, :dish, :persons, :material, :amount, :make_one, :make_two, :make_three, :make_four, :make_five).merge(user_id: current_user.id)
   end
