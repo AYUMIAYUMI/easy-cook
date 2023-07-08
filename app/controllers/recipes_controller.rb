@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :move_to_signed_in, except: [:index]
   def index
     @recipes = Recipe.all
   end
@@ -9,6 +10,11 @@ class RecipesController < ApplicationController
   
   def create
     @recipe = Recipe.create(recipe_params)
+    if @recipe.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -30,7 +36,12 @@ class RecipesController < ApplicationController
   end
 
   private
-  
+  def move_to_signed_in
+    unless user_signed_in?
+      redirect_to  '/users/sign_in'
+    end
+  end
+
   def recipe_params
     params.require(:recipe).permit(:image, :dish, :persons, :material, :amount, :make_one, :make_two, :make_three, :make_four, :make_five).merge(user_id: current_user.id)
   end
