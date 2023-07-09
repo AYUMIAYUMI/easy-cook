@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :move_to_signed_in, except: [:index]
+  before_action :move_to_signed_in, except: [:index, :show]
   def index
     @recipes = Recipe.all
   end
