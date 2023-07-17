@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nick_name: ニックネーム
+        email: メールアドレス
+        password: パスワード
+      recipe:
+        image: 画像
+        dish: 料理名
+        persons: 人数
+        material: 材料
+        amount: 分量
+        make_one: レシピ１
+        make_two: レシピ２
+        make_three: レシピ３
+        make_four: レシピ４
+        make_five: レシピ５
