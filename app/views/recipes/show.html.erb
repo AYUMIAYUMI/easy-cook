@@ -7,47 +7,84 @@
   </div>
 
   <!--料理名-->
+  <div class="show-text">
+  </div>
   <h2 class="d-name">
     <%= @recipe.dish%>
   </h2>
 
   <!--人数-->
+  <div class="show-text">
+    人数
+  </div>
   <div class="r-persons">
     <%= @recipe.persons%>
   </div>
 
   <!--材料-->
+  <div class="show-text">
+    材料
+  </div>
   <div class="r-material">
     <%= @recipe.material%>
   </div>
 
   <!--分量-->
+  <div class="show-text">
+    分量
+  </div>
   <div class="r-amount">
     <%= @recipe.amount%>
   </div>
 
   <!--作り方-->
+  <div class="show-text">
+    作り方
+  </div>
   <div class="r-make-box">
-
+    <div class="show-text">
+      その１
+    </div>
     <div class="r-make1">
       <%= @recipe.make_one%>
     </div>
 
+    <div class="show-text">
+      その２
+    </div>
     <div class="r-make2">
       <%= @recipe.make_two%>
     </div>
 
-    <div class="r-make3">
-      <%= @recipe.make_three%>
-    </div>
+  <!-- レシピ３〜４、データがあれば表示-->
+    <% if @recipe.make_three.present? %>
+      <div class="show-text">
+        その３
+      </div>
+      <div class="r-make3">
+        <%= @recipe.make_three%>
+      </div>
+    <% end %>
 
-    <div class="r-make4">
-      <%= @recipe.make_four%>
-    </div>
+    <% if @recipe.make_four.present? %>
+      <div class="show-text">
+        その４
+      </div>
+      <div class="r-make4">
+        <%= @recipe.make_four%>
+      </div>
+    <% end %>
 
-    <div class="r-make5">
-      <%= @recipe.make_five%>
-    </div>
+    <% if @recipe.make_five.present? %>
+      <div class="show-text">
+        その５
+      </div>
+      <div class="r-make5">
+        <%= @recipe.make_five%>
+      </div>
+    <% end %>
+
+  <!-- レシピ３〜４、データがあれば表示-->
 
     <div class="recipe-contributor">
       レシピ作成者
