@@ -1,6 +1,5 @@
 <!--レシピ投稿ページ-->
-
-
+<%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
 
   <div class="new-main">
     <h1>レシピの内容を変更できます</h1>
@@ -87,3 +86,5 @@
     <% end %>
 
   </div>
+
+<%= render partial: "devise/shared/footer"%>

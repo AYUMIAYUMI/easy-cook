@@ -23,6 +23,8 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    return unless @recipe.user_id != current_user.id
+    redirect_to root_path
   end
 
   def destroy
