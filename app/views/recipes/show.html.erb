@@ -3,7 +3,7 @@
 <div class="recipe-show">
   <!--画像-->
   <div class="recipe-img-content">
-    <%= image_tag @recipe.image, class:"recipe-box-img", size: "300x250" %>
+    <%= image_tag @recipe.image, class:"recipe-box-img" %>
   </div>
 
   <!--料理名-->
@@ -97,7 +97,7 @@
 
   <% if  user_signed_in? &&  current_user.id == @recipe.user_id %>
     <%= link_to "レシピを編集する", edit_recipe_path(@recipe.id), method: :get, class: "recipe-red-btn" %>
-    <%= link_to "レシピを削除する", recipe_path(@recipe.id), method: :delete, class:"recipe-destroy" %>
+    <%= link_to "レシピを削除する", recipe_path(@recipe.id), method: :delete, data: { confirm: '本当に削除しますか？' }, class:"recipe-destroy" %>
   <% end %>
 </div>
 
