@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :move_to_signed_in, except: [:index, :show, :edit]
+  before_action :move_to_signed_in, except: [:index, :show]
   def index
     @recipes = Recipe.all
   end
@@ -23,14 +23,15 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    unless user_signed_in? && current_user.id == @recipe.user_id
-      redirect_to root_path
-    end
+    return unless @recipe.user_id != current_user.id
+    redirect_to root_path
   end
 
   def destroy
     @recipe = Recipe.find(params[:id])
-    @recipe.destroy
+    if @recipe.destroy
+      redirect_to root_path, notice: 'レシピを削除しました'
+    end
   end
 
   def update

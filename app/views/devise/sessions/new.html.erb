@@ -1,4 +1,9 @@
 <div class="contents row">
+  <!--ヘッダータイトル-->
+  <div class="big-title">
+    <%=link_to 'easy-cook!', '/' %>
+  </div>
+
   <div class="container">
     <h2>ログイン</h2>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
@@ -21,4 +26,10 @@
       </div>
     <% end %>
   </div>
+
+  <footer class='top-page-footer'>
+      <p>
+        Copyright easy-cook! 2023.
+      </p>
+</footer>
 </div>
