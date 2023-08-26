@@ -1,3 +1,4 @@
+<div class="main">
 <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
 
 <div class="recipe-show">
@@ -92,16 +93,12 @@
     <div class="recipe-user">
       <%= @recipe.user.nick_name%>
     </div>
-
   </div>
-
 
   <% if user_signed_in? && current_user.id == @recipe.user_id %>
     <%= link_to "レシピを編集する", edit_recipe_path(@recipe.id), method: :get, class: "recipe-red-btn"%>
     <%= link_to "レシピを削除する", recipe_path(@recipe.id),method: :delete, class:"recipe-destroy" %>
-
   <% end %>
-
-
 </div>
 <%= render partial: "devise/shared/footer"%>
+</div>

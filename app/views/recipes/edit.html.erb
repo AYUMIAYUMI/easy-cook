@@ -1,13 +1,10 @@
 <!--レシピ投稿ページ-->
-
-<%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
-
+<div class="main">
+  <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
   <div class="new-main">
     <h1>レシピの内容を変更できます</h1>
 
     <!--投稿フォーム-->
-
-
     <%= form_with(model: @recipe, local: true) do |form| %>
 
       <!--画像フォーム-->
@@ -23,17 +20,14 @@
           <%= form.file_field :image, id:"recipe-image" %>
         </div>
       </div>
-
       <!--画像フォーム-->
-
-
 
       <div class="new-recipetexts">
 
         <div class="weight-bold-text">
           料理名
         </div>
-        <%= form.text_area :dish, class:"recipes-text",  id:"recipe-name" %><!--idが曖昧なので仮-->
+        <%= form.text_area :dish, class:"recipes-text",  id:"recipe-name" %>
 
         <div class="weight-bold-text">
           人数
@@ -85,7 +79,6 @@
         </div>
       </div>
     <% end %>
-
   </div>
-
-<%= render partial: "devise/shared/footer"%>
+  <%= render partial: "devise/shared/footer"%>
+</div>

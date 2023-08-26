@@ -1,92 +1,86 @@
 <!--レシピ投稿ページ-->
-<%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
-  <link rel="stylesheet" href="style.css">
-
+<div class="main">
+  <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
   <div class="new-main">
-    <h1>あなたのレシピを投稿しよう！</h1>
+      <h1>あなたのレシピを投稿しよう！</h1>
+      <%= form_with(model: @recipe, local: true) do |form| %>
+      <%= render 'layouts/error_messages', model: form.object %>
 
-    <!--投稿フォーム-->
-
-
-    <%= form_with(model: @recipe, local: true) do |form| %>
-    <%= render 'layouts/error_messages', model: form.object %>
-
-      <!--画像フォーム-->
-      <div class="img-upload">
-        <div class="weight-bold-text">
-          レシピ画像
-          <span class="indispensable">必須</span>
-        </div>
-       <div class="click-upload">
-          <p>
-            クリックしてファイルをアップロード
-          </p>
-          <%= form.file_field :image, id:"recipe-image" %>
-        </div>
-      </div>
-
-      <!--画像フォーム-->
-
-
-
-      <div class="new-recipetexts">
-
-        <div class="weight-bold-text">
-          料理名
-        </div>
-        <%= form.text_area :dish, class:"recipes-text",  id:"recipe-name" %><!--idが曖昧なので仮-->
-
-        <div class="weight-bold-text">
-          人数
-        </div>
-        <%= form.text_area :persons, class:"recipes-text", id:"recipe-persons" %>
-
-        <div class="weight-bold-text">
-          材料
-        </div>
-        <%= form.text_area :material, class:"recipes-text", id:"recipe-material" %>
-
-        <div class="weight-bold-text">
-          分量
-        </div>
-        <%= form.text_area :amount, class:"recipes-text", id:"recipe-amount" %>
-
-        <div class="tukurikata">
-          作り方（1.と2.は必須項目です）
+        <!--画像フォーム-->
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            レシピ画像
+            <span class="indispensable">必須</span>
+          </div>
+         <div class="click-upload">
+            <p>
+              クリックしてファイルをアップロード
+            </p>
+            <%= form.file_field :image, id:"recipe-image" %>
+          </div>
         </div>
 
-        <div class="weight-bold-text">
-          1.
-        </div>
-        <%= form.text_area :make_one, class:"recipes-text", id:"recipe-one" %>
+        <!--画像フォーム-->
 
-        <div class="weight-bold-text">
-          2.
-        </div>
-        <%= form.text_area :make_two, class:"recipes-text", id:"recipe-two" %>
 
-        <div class="weight-bold-text">
-          3.
-        </div>
-        <%= form.text_area :make_three, class:"recipes-text", id:"recipe-three" %>
 
-        <div class="weight-bold-text">
-          4.
-        </div>
-        <%= form.text_area :make_four, class:"recipes-text", id:"recipe-four" %>
+        <div class="new-recipetexts">
 
-        <div class="weight-bold-text">
-          5.
-        </div>
-        <%= form.text_area :make_five, class:"recipes-text", id:"recipe-five" %>
+          <div class="weight-bold-text">
+            料理名
+          </div>
+          <%= form.text_area :dish, class:"recipes-text",  id:"recipe-name" %>
 
-        <div class="rp-btn-contents">
-          <%= form.submit "このレシピで投稿する！" ,class:"rp-btn" %>
-          <%=link_to 'もどる', root_path, class:"back-btn" %>
-        </div>
-      </div>
-    <% end %>
+          <div class="weight-bold-text">
+            人数
+          </div>
+          <%= form.text_area :persons, class:"recipes-text", id:"recipe-persons" %>
 
+          <div class="weight-bold-text">
+            材料
+          </div>
+          <%= form.text_area :material, class:"recipes-text", id:"recipe-material" %>
+
+          <div class="weight-bold-text">
+            分量
+          </div>
+          <%= form.text_area :amount, class:"recipes-text", id:"recipe-amount" %>
+
+          <div class="tukurikata">
+            作り方（1.と2.は必須項目です）
+          </div>
+
+          <div class="weight-bold-text">
+            1.
+          </div>
+          <%= form.text_area :make_one, class:"recipes-text", id:"recipe-one" %>
+
+          <div class="weight-bold-text">
+            2.
+          </div>
+          <%= form.text_area :make_two, class:"recipes-text", id:"recipe-two" %>
+
+          <div class="weight-bold-text">
+            3.
+          </div>
+          <%= form.text_area :make_three, class:"recipes-text", id:"recipe-three" %>
+
+          <div class="weight-bold-text">
+            4.
+          </div>
+          <%= form.text_area :make_four, class:"recipes-text", id:"recipe-four" %>
+
+          <div class="weight-bold-text">
+            5.
+          </div>
+          <%= form.text_area :make_five, class:"recipes-text", id:"recipe-five" %>
+
+          <div class="rp-btn-contents">
+            <%= form.submit "このレシピで投稿する！" ,class:"rp-btn" %>
+            <%=link_to 'もどる', root_path, class:"back-btn" %>
+          </div>
+        </div>
+      <% end %>
   </div>
-
-<%= render partial: "devise/shared/footer"%>
+  <%= render partial: "devise/shared/footer"%>
+</div>

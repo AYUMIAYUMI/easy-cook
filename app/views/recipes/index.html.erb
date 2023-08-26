@@ -1,57 +1,54 @@
-<%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
 
-<%= notice %>
-<div class="main" >
-  <!-- 文章 -->
-  <div class="sentense">
-    5の工程内で料理ができる!!<br>
-    らくちんレシピをシェアしよう！！
-  </div>
-
-  <!-- レシピ投稿ページ遷移ボタン -->
-  <div class="new-btn">
-      <%= link_to 'レシピを投稿する！', '/recipes/new'%>
-  </div>
-  <!-- レシピ一覧 -->
-  <div class="recipe-contents">
-    <div class="subtitle">
-      みんなのレシピ
+<div class="main">
+  <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
+  <%= notice %>
+  <div class="main" >
+    <!-- 文章 -->
+    <div class="sentense">
+      5の工程内で料理ができる!!<br>
+      らくちんレシピをシェアしよう！！
     </div>
 
-    <ul class='recipe-lists'>
-    <% @recipes.each do |recipe|%>
-      <li class='list'>
+    <!-- レシピ投稿ページ遷移ボタン -->
+    <div class="new-btn">
+        <%= link_to 'レシピを投稿する！', '/recipes/new'%>
+    </div>
+    <!-- レシピ一覧 -->
+    <div class="recipe-contents">
+      <div class="subtitle">
+        みんなのレシピ
+      </div>
+      <ul class='recipe-lists'>
+      <% @recipes.each do |recipe|%>
+        <li class='list'>
 
-        <%= link_to recipe_path(recipe) do %>
-          <!-- レシピ画像-->
-          <div class='recipe-img-content'>
-            <%= image_tag recipe.image, size: "300x250", class: 'recipe-image' if recipe.image.attached?  %>
-          </div>
+          <%= link_to recipe_path(recipe) do %>
+            <!-- レシピ画像-->
+            <div class='recipe-img-content'>
+              <%= image_tag recipe.image, size: "300x250", class: 'recipe-image' if recipe.image.attached?  %>
+            </div>
 
-          <div class='recipe-info'>
-            <!-- レシピタイトル-->
-            <h3 class='recipe-name'>
-              <%= recipe.dish%>
-            </h3>
-          </div>
-        <% end %>
+            <div class='recipe-info'>
+              <!-- レシピタイトル-->
+              <h3 class='recipe-name'>
+                <%= recipe.dish%>
+              </h3>
+            </div>
+          <% end %>
+        </li>
+      <% end%>
+      <!--レシピ例-->
+      <% if @recipes.length == 0 %>
 
-      </li>
-    <% end%>
-    <!--レシピ例-->
-    <% if @recipes.length == 0 %>
-
-    <%= image_tag "food_pork_chup.png", size: "300x250" %>
-          <div class='recipe-info'>
-            <!-- レシピタイトル-->
-            <h3 class='recipe-name'>
-              レシピを投稿しよう！
-            </h3>
-          </div>
-    <% end %>
+      <%= image_tag "food_pork_chup.png", size: "300x250" %>
+            <div class='recipe-info'>
+              <!-- レシピタイトル-->
+              <h3 class='recipe-name'>
+                レシピを投稿しよう！
+              </h3>
+            </div>
+      <% end %>
+    </div>
   </div>
+  <%= render partial: "devise/shared/footer"%>
 </div>
-
-<%= render partial: "devise/shared/footer"%>
-
-

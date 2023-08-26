@@ -1,13 +1,6 @@
-<div class="contents row">
-<link rel="stylesheet" href="header.css">
-  <!--ヘッダータイトル-->
-  <div class="top-page-header">
-    <div class="big-title">
-      <%=link_to 'easy-cook!', '/' %>
-    </div>
-  </div>
-
-  <div class="container">
+<body>
+  <div class="main">
+    <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
     <h2>ログイン</h2>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class='login-flash-message'>
@@ -28,11 +21,6 @@
         <%= f.submit "ログインする" %>
       </div>
     <% end %>
+    <%= render partial: "devise/shared/footer"%>
   </div>
-
-  <footer class='top-page-footer'>
-      <p>
-        Copyright easy-cook! 2023.
-      </p>
-</footer>
-</div>
+</body>
