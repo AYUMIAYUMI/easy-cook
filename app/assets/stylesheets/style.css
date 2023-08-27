@@ -10,6 +10,17 @@
   list-style:none;
 }
 
+/*ログイン画面css*/
+ .login{
+  margin: auto;
+ }
+
+ .field{
+  padding-bottom: 5vh;
+ }
+/*ログイン画面css*/
+
+
 /*index css*/
  .sentense{
   font-size: 2vh;
@@ -47,3 +58,5 @@
   margin-top: 5vh;
   margin-bottom: 10vh;
  }
+ /*index css*/
+
