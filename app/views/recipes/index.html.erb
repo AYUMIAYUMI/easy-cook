@@ -1,11 +1,11 @@
 
 <div class="main">
   <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
-  <%= notice %>
-  <div class="main" >
+
+  <div class="main-top" >
     <!-- 文章 -->
     <div class="sentense">
-      5の工程内で料理ができる!!<br>
+      5つの工程内で料理ができる!!<br>
       らくちんレシピをシェアしよう！！
     </div>
 
@@ -16,23 +16,24 @@
     <!-- レシピ一覧 -->
     <div class="recipe-contents">
       <div class="subtitle">
-        みんなのレシピ
+        〜みんなのレシピ〜
       </div>
       <ul class='recipe-lists'>
       <% @recipes.each do |recipe|%>
         <li class='list'>
 
           <%= link_to recipe_path(recipe) do %>
-            <!-- レシピ画像-->
-            <div class='recipe-img-content'>
-              <%= image_tag recipe.image, size: "300x250", class: 'recipe-image' if recipe.image.attached?  %>
-            </div>
-
-            <div class='recipe-info'>
-              <!-- レシピタイトル-->
-              <h3 class='recipe-name'>
-                <%= recipe.dish%>
-              </h3>
+            <div class="recipe-date">
+              <!-- レシピ画像-->
+              <div class='recipe-img-content'>
+                <%= image_tag recipe.image, size: "300x250", class: 'recipe-image' if recipe.image.attached?  %>
+              </div>
+              <div class='recipe-info'>
+                <!-- レシピタイトル-->
+                <h3 class='recipe-name'>
+                  <%= recipe.dish%>
+                </h3>
+              </div>
             </div>
           <% end %>
         </li>
