@@ -1,12 +1,15 @@
   <div class="main">
     <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
-    <div class="login">
-      <h2>ログイン</h2>
+    <h2>ログイン</h2>
+    <div class="login-top">
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
+    </div>
+    <div class="new-login">
       <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-        <div class='login-flash-message'>
-          <%= flash[:notice] %>
-          <%= flash[:alert] %>
-        </div>
+
         <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true %>
