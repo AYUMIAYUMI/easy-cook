@@ -77,3 +77,65 @@
  }
  /*index css*/
 
+/*show css*/
+ .r-persons{
+  margin-top: 20px;
+ }
+
+ .recipe-img-content{
+  margin: auto;
+ }
+
+ .show-text{
+  margin-top: 20px;
+  margin-bottom: 3px;
+  font-weight: bold;
+ }
+
+ .recipe-show{
+  margin: auto;
+  width: 50vh;
+ }
+
+
+ .persons-box{
+  display: flex;
+  margin-bottom: 5vh;
+
+ }
+
+ .r-persons{
+  margin-left: 30px;
+ }
+
+ .mate-amo{
+  display: flex;
+  background-color: #f5deb3;
+  border-radius: 5px;
+  justify-content: space-between
+ }
+
+
+
+/*作り方*/
+.r-make-box{
+  width: 50vh;
+ }
+
+ .r-make{
+  background-color: rgb(174, 204, 255);
+  border-radius: 5px
+  
+ }
+/*作り方*/
+
+
+ .make-user-box{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+ }
+
+ .recipe-user{
+  margin-left: 10px;
+ }
