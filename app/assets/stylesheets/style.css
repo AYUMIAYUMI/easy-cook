@@ -35,7 +35,7 @@
   text-align: center;
  }
 
-/*新規画面、ログイン画面css*/
+/*新規画面、ログイン画面css 終わり*/
 
 
 /*index css*/
@@ -75,7 +75,7 @@
   margin-top: 5vh;
   margin-bottom: 10vh;
  }
- /*index css*/
+ /*index css 終わり*/
 
 /*show css*/
  .r-persons{
@@ -127,7 +127,7 @@
   border-radius: 5px
   
  }
-/*作り方*/
+/*作り方 終わり*/
 
 
  .make-user-box{
@@ -139,3 +139,44 @@
  .recipe-user{
   margin-left: 10px;
  }
+
+ /*show css 終わり*/
+
+/*レシピnew*/
+ .new-main{
+  margin: auto;
+ }
+
+ .new-text{
+  font-weight: bold;
+  font-size: 3vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  color: rgb(144, 45, 41);
+ }
+
+ .new-mateamo{
+  display: flex;
+ }
+
+ .mate-box{
+  display: block;
+ }
+
+ .weight-bold-text{
+  margin-top: 5vh;
+
+ }
+
+ .rp-btn-contents{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+ }
+
+ textarea {
+  resize: none;
+  min-height: 50px;
+  width: 100%;
+}
+
+/*レシピnew 終わり*/

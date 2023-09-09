@@ -2,7 +2,9 @@
 <div class="main">
   <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
   <div class="new-main">
-      <h1>あなたのレシピを投稿しよう！</h1>
+      <div class="new-text">
+        あなたのレシピを投稿しよう！
+      </div>
       <%= form_with(model: @recipe, local: true) do |form| %>
       <%= render 'layouts/error_messages', model: form.object %>
 
@@ -29,28 +31,35 @@
           <div class="weight-bold-text">
             料理名
           </div>
-          <%= form.text_area :dish, class:"recipes-text",  id:"recipe-name" %>
+          <%= form.text_area :dish, class:"recipes-text-dish",  id:"recipe-name" %>
 
           <div class="weight-bold-text">
             人数
           </div>
           <%= form.text_area :persons, class:"recipes-text", id:"recipe-persons" %>
 
-          <div class="weight-bold-text">
-            材料
+          <div class="new-mateamo">
+            <div class="mate-box">
+              <div class="weight-bold-text">
+                材料
+              </div>
+              <%= form.text_area :material, class:"recipes-text", id:"recipe-material" %>
+            </div>
+
+            <div class="amo-box">
+              <div class="weight-bold-text">
+                分量
+              </div>
+              <%= form.text_area :amount, class:"recipes-text", id:"recipe-amount" %>
+            </div> 
           </div>
-          <%= form.text_area :material, class:"recipes-text", id:"recipe-material" %>
+
+
 
           <div class="weight-bold-text">
-            分量
-          </div>
-          <%= form.text_area :amount, class:"recipes-text", id:"recipe-amount" %>
-
-          <div class="tukurikata">
-            作り方（1.と2.は必須項目です）
-          </div>
-
-          <div class="weight-bold-text">
+            <div class="tukurikata">
+              作り方（1.と2.は必須項目です）
+            </div>
             1.
           </div>
           <%= form.text_area :make_one, class:"recipes-text", id:"recipe-one" %>
