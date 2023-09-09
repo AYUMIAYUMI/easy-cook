@@ -43,9 +43,11 @@
  }
 
  .logout {
-  padding-right: 11vh;
+  padding-right: 11vw;
+  padding-left: 5vw;
  }
 
  .sign-up {
   padding-right: 11vh;
  }
+

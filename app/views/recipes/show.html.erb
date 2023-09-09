@@ -28,18 +28,18 @@
   </div>
   <div class="mate-amo">
     <div class="r-material">
-      <%= @recipe.material%>
+      <%=safe_join(@recipe.material.split("\n"),tag(:br))%>
     </div>
 
     <!--分量-->
     <div class="r-amount">
-      <%= @recipe.amount%>
+      <%=safe_join(@recipe.amount.split("\n"),tag(:br))%>
     </div>
   </div>
 
   <!--作り方-->
   <div class="show-text">
-    作り方.
+    ~作り方~
   </div>
   <div class="r-make-box">
 

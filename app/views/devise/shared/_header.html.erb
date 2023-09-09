@@ -9,7 +9,7 @@
   <div class='right-text'>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-         <li><%= link_to current_user.nick_name, "current_user", class: "user-nickname" %></li>
+         <li><%= current_user.nick_name %></li>
          <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ログイン', "/users/sign_in", method: :POST, class: "login" %></li>
