@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   before_action :move_to_signed_in, except: %i[index show]
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.order(created_at: :desc)
   end
 
   def new
