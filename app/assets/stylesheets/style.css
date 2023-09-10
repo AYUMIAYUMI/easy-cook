@@ -39,6 +39,10 @@
 
 
 /*index css*/
+ ul{
+  flex-wrap: wrap;
+ }
+
  .sentense{
   font-size: 2vh;
   text-align: left;
@@ -64,7 +68,7 @@
 
  .recipe-lists{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
  }
 
  .recipe-name{
