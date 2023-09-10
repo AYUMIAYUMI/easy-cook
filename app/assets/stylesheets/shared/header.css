@@ -1,0 +1,53 @@
+/*共通ヘッダー*/
+ a {
+  text-decoration: none;
+  color: rgb(242, 134, 57);
+ }
+
+ a:hover {
+  color: blue;
+}
+
+ .top-page-header {
+  width: 100vw;
+  height: 10vh;
+  background-color :beige;
+  display: flex;
+  align-items: center;
+ }
+
+
+ .big-title {
+  font-weight: bold;
+  margin-right: auto;
+  font-size: 5vh;
+ }
+
+
+ .lists-right {
+  display: flex;
+  font-size: 2vh;
+  list-style: none;
+  margin-right: 5vh;
+  font-weight: bold;
+ }
+
+
+ .user-nickname {
+  padding-right: 5vw;
+
+ }
+
+ .login {
+  padding-right: 5vw;
+ }
+
+ .logout {
+  padding-right: 11vw;
+  padding-left: 5vw;
+ }
+
+ .sign-up {
+  padding-right: 11vh;
+ }
+

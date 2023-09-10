@@ -1,14 +1,11 @@
-<div class="contents row">
-
-  <div class="big-title">
-    <%=link_to 'easy-cook!', '/' %>
+<div class="main">
+  <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
+  <h2>新規登録</h2>
+  <div class='login-top'>
+    <%= render "devise/shared/error_messages", resource: resource %>
   </div>
-
-  <div class="container">
-    <h2>新規登録</h2>
+  <div class="new-login">
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
       <div class="field">
         <%= f.label :ニックネーム %><br />
         <%= f.text_field :nick_name, autofocus: true %>
@@ -34,10 +31,5 @@
       </div>
     <% end %>
   </div>
-
-  <footer class='top-page-footer'>
-      <p>
-        Copyright easy-cook! 2023.
-      </p>
-</footer>
+  <%= render partial: "devise/shared/footer"%>
 </div>

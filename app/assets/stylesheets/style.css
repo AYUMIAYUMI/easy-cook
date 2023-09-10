@@ -1,0 +1,186 @@
+
+ .main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+ }
+
+ li{
+  list-style:none;
+}
+
+/*新規画面、ログイン画面css*/
+ .new-login{
+  margin: auto;
+ }
+
+ h2{
+  text-align: center;
+ }
+
+ .field{
+  padding-bottom: 5vh;
+ }
+
+ .login-flash-message{
+  font-size: 10px;
+  color: red;
+ }
+
+ .login-top{
+  width: 100%;
+  height: 5vh;
+  padding-top: 5px;
+  text-align: center;
+ }
+
+/*新規画面、ログイン画面css 終わり*/
+
+
+/*index css*/
+ ul{
+  flex-wrap: wrap;
+ }
+
+ .sentense{
+  font-size: 2vh;
+  text-align: left;
+  color: brown;
+  padding-top: 5px;
+  padding-bottom: 30px;
+ }
+
+ .new-btn{
+  width: 12VW;
+  display: grid;
+  grid-template-columns: auto;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px
+ }
+
+ .subtitle{
+  text-align: center;
+  font-size: 3vh;
+  padding-top: 5vh;
+ }
+
+ .recipe-lists{
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .recipe-name{
+  text-align: center;
+ }
+ 
+ .recipe-date{
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+ }
+ /*index css 終わり*/
+
+/*show css*/
+ .r-persons{
+  margin-top: 20px;
+ }
+
+ .recipe-img-content{
+  margin: auto;
+ }
+
+ .show-text{
+  margin-top: 20px;
+  margin-bottom: 3px;
+  font-weight: bold;
+ }
+
+ .recipe-show{
+  margin: auto;
+  width: 50vh;
+ }
+
+
+ .persons-box{
+  display: flex;
+  margin-bottom: 5vh;
+
+ }
+
+ .r-persons{
+  margin-left: 30px;
+ }
+
+ .mate-amo{
+  display: flex;
+  background-color: #f5deb3;
+  border-radius: 5px;
+  justify-content: space-between
+ }
+
+
+
+/*作り方*/
+.r-make-box{
+  width: 50vh;
+ }
+
+ .r-make{
+  background-color: rgb(183, 207, 247);
+  border-radius: 5px
+  
+ }
+/*作り方 終わり*/
+
+
+ .make-user-box{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+ }
+
+ .recipe-user{
+  margin-left: 10px;
+ }
+
+ /*show css 終わり*/
+
+/*レシピnew*/
+ .new-main{
+  margin: auto;
+ }
+
+ .new-text{
+  font-weight: bold;
+  font-size: 3vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  color: rgb(144, 45, 41);
+ }
+
+ .new-mateamo{
+  display: flex;
+ }
+
+ .mate-box{
+  display: block;
+ }
+
+ .weight-bold-text{
+  margin-top: 5vh;
+
+ }
+
+ .rp-btn-contents{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+ }
+
+ textarea {
+  resize: none;
+  min-height: 100px;
+  width: 100%;
+}
+/*レシピnew 終わり*/
+

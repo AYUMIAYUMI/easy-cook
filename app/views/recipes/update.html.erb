@@ -1,12 +1,11 @@
-<%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
+<div class="main" >
+  <%= render partial: "devise/shared/header", locals: { recipe: @recipe } %>
 
-<div class="contents row">
-  <div class="success">
-    <h3>レシピの変更が完了しました。</h3>
-    <a class="btn" href="/">レシピページに戻る</a>
+  <div class="contents row">
+    <div class="success">
+      <h3>レシピの変更が完了しました。</h3>
+      <a class="btn" href="/">レシピページに戻る</a>
+    </div>
   </div>
+  <%= render partial: "devise/shared/footer"%>
 </div>
-
-
-
-<%= render partial: "devise/shared/footer"%>
