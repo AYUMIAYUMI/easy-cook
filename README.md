@@ -115,6 +115,8 @@ https://docs.google.com/spreadsheets/d/1I9YFbt13al3qHGX6IwO8CQ-PAvXvOQLXVROvl8yB
 
 # 画面遷移図
 
+![recipe2](https://github.com/AYUMIAYUMI/easy-cook/assets/119142344/c93c7cfe-345a-4e69-ac17-9ef0ca62b0b1)
+
 # 開発環境
 
 # ローカルでの動作方法
