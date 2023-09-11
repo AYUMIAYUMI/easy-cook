@@ -110,6 +110,7 @@ https://docs.google.com/spreadsheets/d/1I9YFbt13al3qHGX6IwO8CQ-PAvXvOQLXVROvl8yB
 
 # データベース設計
 
+![recipe](https://github.com/AYUMIAYUMI/easy-cook/assets/119142344/ff6a7842-f562-4978-9483-d2e130469886)
 
 
 # 画面遷移図
