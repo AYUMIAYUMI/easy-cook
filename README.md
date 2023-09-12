@@ -134,8 +134,24 @@ https://docs.google.com/spreadsheets/d/1I9YFbt13al3qHGX6IwO8CQ-PAvXvOQLXVROvl8yB
 
 # ローカルでの動作方法
 
-git clone 
+git clone https://github.com/AYUMIAYUMI/easy-cook.git
+
+cd easy-cook
+
+bundle install
+
+yarn install
+
 
 # 工夫したポイント
+
+新規登録、ログイン時のエラーメッセージが出た際に中央寄せが崩れてしまわないようにエラーメッセージと入力フォームの要素を別に分けました。
+
+また、エラーメッセージはわかりやすいように赤文字の日本語になるようにしました。
+
+同じ枠でありながら、材料と分量をそれぞれ左右の両端に寄せているのがポイントです。
+
+
+
 
 
