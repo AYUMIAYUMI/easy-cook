@@ -67,7 +67,7 @@ https://easy-cook.onrender.com
 
 # テスト用アカウント
 
-・　Basic認証パスワード　：　２２２２
+・　Basic認証パスワード　：　2222
 
 ・　Basic認証ID ：　admin
 
@@ -119,7 +119,22 @@ https://docs.google.com/spreadsheets/d/1I9YFbt13al3qHGX6IwO8CQ-PAvXvOQLXVROvl8yB
 
 # 開発環境
 
+ Ruby
+ 
+ Ruby on Rails
+ 
+ MySQL
+ 
+ Github
+ 
+ AWS
+ 
+ Visual Studio Code
+
+
 # ローカルでの動作方法
+
+
 
 # 工夫したポイント
 
