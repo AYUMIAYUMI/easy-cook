@@ -134,7 +134,7 @@ https://docs.google.com/spreadsheets/d/1I9YFbt13al3qHGX6IwO8CQ-PAvXvOQLXVROvl8yB
 
 # ローカルでの動作方法
 
-
+git clone 
 
 # 工夫したポイント
 
